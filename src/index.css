@@ -1,96 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Dark architecture palette */
+    --background: 0 0% 6%;
+    --background-deep: 0 0% 4%;
+    --foreground: 0 0% 100%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Bronze/Copper accent */
+    --primary: 28 56% 46%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 28 56% 46%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 20%;
+    --border-subtle: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 28 56% 46%;
 
-    --radius: 0.5rem;
+    --radius: 0px;
 
-    --sidebar-background: 0 0% 98%;
+    /* Custom properties */
+    --nav-height: 80px;
+    --section-spacing: 120px;
+    --content-max-width: 1400px;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Typography */
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 0 0% 6%;
+    --foreground: 0 0% 100%;
   }
 }
 
@@ -99,7 +61,170 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    @apply font-medium tracking-tight;
+  }
+}
+
+@layer components {
+  /* Navigation styles */
+  .nav-blur {
+    @apply backdrop-blur-md bg-background/80 border-b border-border-subtle;
+  }
+
+  /* Section container */
+  .section-container {
+    @apply max-w-[var(--content-max-width)] mx-auto px-6 md:px-12 lg:px-16;
+  }
+
+  /* Project card hover effect */
+  .project-card {
+    @apply relative overflow-hidden transition-all duration-500 ease-out;
+  }
+
+  .project-card:hover {
+    @apply scale-[1.02];
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+
+  .project-card-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-background-deep/90 via-background-deep/40 to-transparent 
+           opacity-0 transition-opacity duration-500;
+  }
+
+  .project-card:hover .project-card-overlay {
+    @apply opacity-100;
+  }
+
+  /* Bronze accent underline */
+  .accent-underline {
+    @apply relative inline-block;
+  }
+
+  .accent-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-[1px] bg-primary scale-x-0 
+           origin-left transition-transform duration-300;
+  }
+
+  .accent-underline:hover::after {
+    @apply scale-x-100;
+  }
+
+  /* Scroll indicator animation */
+  @keyframes scroll-indicator {
+    0%, 100% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(8px); opacity: 0.5; }
+  }
+
+  .scroll-indicator {
+    animation: scroll-indicator 2s ease-in-out infinite;
+  }
+
+  /* Text reveal animation */
+  @keyframes text-reveal {
+    from { 
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .text-reveal {
+    animation: text-reveal 0.8s ease-out forwards;
+  }
+
+  /* Horizontal scroll for timeline */
+  .horizontal-scroll {
+    @apply flex overflow-x-auto snap-x snap-mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .horizontal-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Focus states for accessibility */
+  .focus-ring {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 
+           focus-visible:ring-offset-background;
+  }
+
+  /* Border line decorations */
+  .border-line {
+    @apply border border-border;
+  }
+
+  .border-line-subtle {
+    @apply border border-border-subtle;
+  }
+
+  /* Image container with aspect ratio */
+  .image-container {
+    @apply relative overflow-hidden bg-muted;
+  }
+
+  .image-container img {
+    @apply w-full h-full object-cover transition-transform duration-700;
+  }
+
+  .image-container:hover img {
+    @apply scale-105;
+  }
+}
+
+@layer utilities {
+  /* Custom spacing utilities */
+  .section-py {
+    @apply py-20 md:py-32;
+  }
+
+  /* Typography utilities */
+  .heading-xl {
+    @apply text-5xl md:text-7xl lg:text-8xl font-light tracking-tighter;
+  }
+
+  .heading-lg {
+    @apply text-3xl md:text-5xl lg:text-6xl font-light tracking-tight;
+  }
+
+  .heading-md {
+    @apply text-2xl md:text-3xl lg:text-4xl font-light tracking-tight;
+  }
+
+  .body-lg {
+    @apply text-lg md:text-xl font-light leading-relaxed;
+  }
+
+  .body-md {
+    @apply text-base md:text-lg font-light leading-relaxed;
+  }
+
+  .caption {
+    @apply text-xs md:text-sm uppercase tracking-widest text-muted-foreground;
+  }
+
+  /* Layout utilities */
+  .full-viewport {
+    @apply min-h-screen;
+  }
+
+  /* Transition utilities */
+  .transition-smooth {
+    @apply transition-all duration-500 ease-out;
   }
 }
