@@ -37,6 +37,18 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             <p className="text-sm text-muted-foreground">{project.location}</p>
           </div>
 
+          {/* Label + Status Badges */}
+          <div className="absolute top-4 left-4 flex gap-2">
+            <div className="px-3 py-1 bg-background/90 border border-border">
+              <span className="caption">{project.label}</span>
+            </div>
+            {project.status === 'wip' && (
+              <div className="px-3 py-1 bg-primary/20 border border-primary/40">
+                <span className="caption text-primary">WIP</span>
+              </div>
+            )}
+          </div>
+
           {/* Year Badge */}
           <div className="absolute top-4 right-4 px-3 py-1 bg-background/90 border border-border">
             <span className="caption">{project.year}</span>

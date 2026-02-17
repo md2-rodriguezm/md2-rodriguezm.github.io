@@ -4,9 +4,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
 const navLinks = [
-  { name: 'Projects', href: '/#projects' },
-  { name: 'About', href: '/#about' },
-  { name: 'Contact', href: '/#contact' },
+  { name: 'Projects', href: '/' },
+  { name: 'Research & Papers', href: '/research' },
+  { name: 'Cross-Cultural', href: '/cross-cultural' },
+  { name: 'Representation', href: '/representation' },
+  { name: 'Sketches', href: '/sketches' },
 ];
 
 export default function Navbar() {
@@ -18,7 +20,6 @@ export default function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -27,22 +28,7 @@ export default function Navbar() {
     setIsMobileMenuOpen(false);
   }, [location]);
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (href.startsWith('/#')) {
-      e.preventDefault();
-      const targetId = href.replace('/#', '');
-      
-      if (location.pathname !== '/') {
-        window.location.href = href;
-        return;
-      }
-      
-      const element = document.getElementById(targetId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  };
+  const isActive = (href: string) => location.pathname === href;
 
   return (
     <>
@@ -64,24 +50,33 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <ul className="hidden md:flex items-center gap-10">
+          <ul className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <li key={link.name}>
-                <a
-                  href={link.href}
-                  onClick={(e) => handleNavClick(e, link.href)}
-                  className="caption accent-underline text-foreground hover:text-primary transition-colors focus-ring py-2"
+                <Link
+                  to={link.href}
+                  className={`caption accent-underline transition-colors focus-ring py-2 ${
+                    isActive(link.href) ? 'text-primary' : 'text-foreground hover:text-primary'
+                  }`}
                 >
                   {link.name}
-                </a>
+                </Link>
               </li>
             ))}
+            <li>
+              <Link
+                to="/job-application"
+                className="caption px-4 py-2 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors focus-ring"
+              >
+                Portfolio
+              </Link>
+            </li>
           </ul>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-foreground hover:text-primary transition-colors focus-ring"
+            className="lg:hidden p-2 text-foreground hover:text-primary transition-colors focus-ring"
             aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -97,26 +92,40 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-background md:hidden"
+            className="fixed inset-0 z-40 bg-background lg:hidden"
           >
-            <nav className="flex flex-col items-center justify-center h-full gap-12">
+            <nav className="flex flex-col items-center justify-center h-full gap-8">
               {navLinks.map((link, index) => (
                 <motion.div
                   key={link.name}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 20 }}
-                  transition={{ delay: index * 0.1 }}
+                  transition={{ delay: index * 0.08 }}
                 >
-                  <a
-                    href={link.href}
-                    onClick={(e) => handleNavClick(e, link.href)}
-                    className="font-heading text-4xl text-foreground hover:text-primary transition-colors"
+                  <Link
+                    to={link.href}
+                    className={`font-heading text-3xl transition-colors ${
+                      isActive(link.href) ? 'text-primary' : 'text-foreground hover:text-primary'
+                    }`}
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </motion.div>
               ))}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
+                transition={{ delay: navLinks.length * 0.08 }}
+              >
+                <Link
+                  to="/job-application"
+                  className="font-heading text-3xl text-primary border-b border-primary pb-1"
+                >
+                  Portfolio
+                </Link>
+              </motion.div>
             </nav>
           </motion.div>
         )}
