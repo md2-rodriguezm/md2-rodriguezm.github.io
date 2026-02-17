@@ -36,17 +36,16 @@ export default function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isScrolled ? 'nav-blur' : 'bg-transparent'
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-black border-b border-white/10 py-3' : 'bg-black py-4'
+          }`}
       >
-        <nav className="section-container flex items-center justify-between h-20">
+        <nav className="section-container flex items-center justify-between h-14">
           {/* Logo */}
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className="font-heading text-xl tracking-tight text-foreground hover:text-primary transition-colors focus-ring"
           >
-            MARCUS<span className="text-primary">.</span>CHEN
+            MDRM<span className="text-primary">.</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -55,9 +54,8 @@ export default function Navbar() {
               <li key={link.name}>
                 <Link
                   to={link.href}
-                  className={`caption accent-underline transition-colors focus-ring py-2 ${
-                    isActive(link.href) ? 'text-primary' : 'text-foreground hover:text-primary'
-                  }`}
+                  className={`caption accent-underline transition-colors focus-ring py-2 ${isActive(link.href) ? 'text-primary' : 'text-foreground hover:text-primary'
+                    }`}
                 >
                   {link.name}
                 </Link>
@@ -92,7 +90,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-background lg:hidden"
+            className="fixed inset-0 z-40 bg-black lg:hidden"
           >
             <nav className="flex flex-col items-center justify-center h-full gap-8">
               {navLinks.map((link, index) => (
@@ -105,9 +103,8 @@ export default function Navbar() {
                 >
                   <Link
                     to={link.href}
-                    className={`font-heading text-3xl transition-colors ${
-                      isActive(link.href) ? 'text-primary' : 'text-foreground hover:text-primary'
-                    }`}
+                    className={`font-heading text-3xl transition-colors ${isActive(link.href) ? 'text-primary' : 'text-foreground hover:text-primary'
+                      }`}
                   >
                     {link.name}
                   </Link>

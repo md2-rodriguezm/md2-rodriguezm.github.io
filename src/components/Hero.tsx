@@ -24,30 +24,24 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 text-center section-container">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
-        >
-          <p className="caption mb-6 text-primary">Architect & Designer</p>
-        </motion.div>
-        
+
+
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
           className="heading-xl mb-8"
         >
-          Marcus Chen
+          Martina D. Rodríguez Marrero
         </motion.h1>
-        
+
         <motion.p
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6 }}
           className="body-lg text-muted-foreground max-w-2xl mx-auto"
         >
-          Creating spaces where light, form, and function 
+          Creating spaces where light, form, and function
           <br className="hidden md:block" />
           converge in perfect harmony
         </motion.p>

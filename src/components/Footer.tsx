@@ -15,11 +15,11 @@ export default function Footer() {
       <div className="section-container">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo */}
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className="font-heading text-lg tracking-tight text-foreground hover:text-primary transition-colors"
           >
-            MARCUS<span className="text-primary">.</span>CHEN
+            MDRM<span className="text-primary">.</span>
           </Link>
 
           {/* Social Links */}
@@ -40,7 +40,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className="caption text-muted-foreground">
-            © {currentYear} Marcus Chen Architecture
+            © {currentYear} Martina D. Rodríguez Marrero Architecture
           </p>
         </div>
       </div>

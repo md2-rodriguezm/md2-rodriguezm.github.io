@@ -17,7 +17,7 @@ export default function About() {
             <div className="image-container aspect-[3/4]">
               <img
                 src={architectPortrait}
-                alt="Marcus Chen, architect and designer, in his minimalist studio"
+                alt="Martina D. Rodríguez Marrero, architect and designer, in his minimalist studio"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -35,21 +35,21 @@ export default function About() {
           >
             <span className="caption text-primary">About</span>
             <h2 className="heading-md mt-4 mb-8">Philosophy & Vision</h2>
-            
+
             <div className="space-y-6 text-muted-foreground body-md">
               <p>
-                Architecture is more than the creation of structures—it's the art of 
+                Architecture is more than the creation of structures—it's the art of
                 shaping human experience through space, light, and material.
               </p>
               <p>
-                With over 15 years of experience spanning residential, commercial, and 
-                cultural projects across three continents, I've developed a practice 
-                rooted in modernist principles while remaining responsive to local 
+                With over 15 years of experience spanning residential, commercial, and
+                cultural projects across three continents, I've developed a practice
+                rooted in modernist principles while remaining responsive to local
                 contexts and sustainable imperatives.
               </p>
               <p>
-                Each project begins with deep listening—understanding not just what 
-                a space needs to do, but what it needs to feel. The result is 
+                Each project begins with deep listening—understanding not just what
+                a space needs to do, but what it needs to feel. The result is
                 architecture that serves its purpose with quiet elegance.
               </p>
             </div>

@@ -31,14 +31,7 @@ export default function Index() {
           >
             <div className="backdrop-blur-xl bg-background/30 border border-border/40 p-12 md:p-20 text-center shadow-2xl">
               {/* Caption */}
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-                className="text-xs uppercase tracking-[0.35em] text-primary mb-8"
-              >
-                Architect &amp; Designer
-              </motion.p>
+
 
               {/* Name */}
               <motion.h1
@@ -47,7 +40,7 @@ export default function Index() {
                 transition={{ duration: 0.8, delay: 0.8 }}
                 className="text-5xl md:text-7xl lg:text-8xl font-light tracking-[-0.04em] text-foreground mb-6"
               >
-                Marcus Chen
+                Martina D. Rodríguez Marrero
               </motion.h1>
 
               {/* Tagline */}

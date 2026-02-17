@@ -64,7 +64,7 @@ export default function JobApplication() {
                 className="lg:col-span-8"
               >
                 <span className="caption text-primary">Portfolio — 2025</span>
-                <h1 className="heading-lg mt-4 mb-4">Marcus Chen</h1>
+                <h1 className="heading-lg mt-4 mb-4">Martina D. Rodríguez Marrero</h1>
                 <p className="font-heading text-xl text-muted-foreground mb-8">
                   Architect · Researcher · M.Arch
                 </p>
@@ -93,10 +93,10 @@ export default function JobApplication() {
                 </div>
 
                 <p className="body-lg text-muted-foreground leading-relaxed mb-10 max-w-2xl">
-                  Architect with 5+ years of professional experience across institutional, 
-                  commercial, and healthcare typologies. My practice integrates rigorous 
-                  technical resolution with a commitment to social responsibility and 
-                  cross-cultural collaboration. Seeking opportunities to contribute to 
+                  Architect with 5+ years of professional experience across institutional,
+                  commercial, and healthcare typologies. My practice integrates rigorous
+                  technical resolution with a commitment to social responsibility and
+                  cross-cultural collaboration. Seeking opportunities to contribute to
                   studios working at the intersection of design excellence and public impact.
                 </p>
 
@@ -234,7 +234,7 @@ export default function JobApplication() {
             >
               <h2 className="heading-md mb-6">Interested in working together?</h2>
               <p className="body-md text-muted-foreground mb-10 max-w-lg mx-auto">
-                I'm open to studio positions, collaborations, and freelance commissions. 
+                I'm open to studio positions, collaborations, and freelance commissions.
                 Download the full portfolio or get in touch directly.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
