@@ -5,31 +5,31 @@ import Footer from '@/components/Footer';
 import Lightbox from '@/components/Lightbox';
 
 // Modelling
-import m1 from '@/assets/REPRESENTATION/MODELLING/Experimental Model - Label Template.png';
-import m2 from '@/assets/REPRESENTATION/MODELLING/MODEL BANO PUBLICO.jpg';
-import m3 from '@/assets/REPRESENTATION/MODELLING/sculpture.jpeg';
-import m4 from '@/assets/REPRESENTATION/MODELLING/IMG_7595.JPG';
+import m1 from '@/assets/representation/modelling/experimental-model-label-template.png';
+import m2 from '@/assets/representation/modelling/model-bano-publico.jpg';
+import m3 from '@/assets/representation/modelling/sculpture.jpeg';
+import m4 from '@/assets/representation/modelling/img-7595.jpg';
 
 // Paint
-import p1 from '@/assets/REPRESENTATION/PAINT/Canary marine fish stamps en tamaño grande.png';
-import p2 from '@/assets/REPRESENTATION/PAINT/IMG_4868.jpg';
-import p3 from '@/assets/REPRESENTATION/PAINT/PIE PIANO.JPG';
-import p4 from '@/assets/REPRESENTATION/PAINT/paco.pngbeige.png';
-import p5 from '@/assets/REPRESENTATION/PAINT/Dialectic Drawing - Label Template.png';
-import p6 from '@/assets/REPRESENTATION/PAINT/Ci(s)ma.png';
+import p1 from '@/assets/representation/paint/canary-marine-fish-stamps.png';
+import p2 from '@/assets/representation/paint/img-4868.jpg';
+import p3 from '@/assets/representation/paint/pie-piano.jpg';
+import p4 from '@/assets/representation/paint/paco-beige.png';
+import p5 from '@/assets/representation/paint/dialectic-drawing-label-template.png';
+import p6 from '@/assets/representation/paint/cisma.png';
 
 // Technical Drawing
-import t1 from '@/assets/REPRESENTATION/TECHNICAL DRAWING/IMG_0788.jpg';
-import t2 from '@/assets/REPRESENTATION/TECHNICAL DRAWING/Playing with Perspective color.jpg';
-import t3 from '@/assets/REPRESENTATION/TECHNICAL DRAWING/Section BB.png';
-import t4 from '@/assets/REPRESENTATION/TECHNICAL DRAWING/SKM_364e20022714240.JPG';
-import t5 from '@/assets/REPRESENTATION/TECHNICAL DRAWING/persp arm.png';
-import t6 from '@/assets/REPRESENTATION/TECHNICAL DRAWING/962DC66B-9D59-4B98-9141-930A984A976A.JPG';
-import t7 from '@/assets/REPRESENTATION/TECHNICAL DRAWING/IMG_7650.JPG';
-import t8 from '@/assets/REPRESENTATION/TECHNICAL DRAWING/P4.png';
+import t1 from '@/assets/representation/technical-drawing/img-0788.jpg';
+import t2 from '@/assets/representation/technical-drawing/playing-with-perspective-color.jpg';
+import t3 from '@/assets/representation/technical-drawing/section-bb.png';
+import t4 from '@/assets/representation/technical-drawing/skm-364e20022714240.jpg';
+import t5 from '@/assets/representation/technical-drawing/persp-arm.png';
+import t6 from '@/assets/representation/technical-drawing/962dc66b-9d59-4b98-9141-930a984a976a.jpg';
+import t7 from '@/assets/representation/technical-drawing/img-7650.jpg';
+import t8 from '@/assets/representation/technical-drawing/p4.png';
 
 // Expo
-import expo from '@/assets/REPRESENTATION/element a expo.png';
+import expo from '@/assets/representation/element-a-expo.png';
 
 interface GalleryItem {
   id: string;

@@ -1,21 +1,21 @@
-import project1Main from '@/assets/project_1/AERIAL PACO.jpg';
-import project1Img2 from '@/assets/project_1/RENDER ENTRADA.jpg';
-import project1Img3 from '@/assets/project_1/aduitorio nightttt.jpg';
-import project1Img4 from '@/assets/project_1/entrada N.jpg';
+import project1Main from '@/assets/project_1/aerial-paco.jpg';
+import project1Img2 from '@/assets/project_1/render-entrada.jpg';
+import project1Img3 from '@/assets/project_1/aduitorio-nightttt.jpg';
+import project1Img4 from '@/assets/project_1/entrada-n.jpg';
 import project1Img5 from '@/assets/project_1/structure.jpg';
-import project1Img6 from '@/assets/project_1/COMO PORTADA_page_1.png';
+import project1Img6 from '@/assets/project_1/como-portada-page-1.png';
 
-import project2Main from '@/assets/project_2/COMO PORTADA.png';
-import project2Img2 from '@/assets/project_2/Image12.png';
-import project2Img3 from '@/assets/project_2/Image13.png';
-import project2Img4 from '@/assets/project_2/Image15.png';
-import project2Img5 from '@/assets/project_2/Image16_002.png';
-import project2Img6 from '@/assets/project_2/Image2_000.png';
-import project2Img7 from '@/assets/project_2/Image6_000.png';
-import project2Img8 from '@/assets/project_2/Image9_000.png';
-import project2Img9 from '@/assets/project_2/barricas inhavited.png';
+import project2Main from '@/assets/project_2/como-portada.png';
+import project2Img2 from '@/assets/project_2/image12.png';
+import project2Img3 from '@/assets/project_2/image13.png';
+import project2Img4 from '@/assets/project_2/image15.png';
+import project2Img5 from '@/assets/project_2/image16-002.png';
+import project2Img6 from '@/assets/project_2/image2-000.png';
+import project2Img7 from '@/assets/project_2/image6-000.png';
+import project2Img8 from '@/assets/project_2/image9-000.png';
+import project2Img9 from '@/assets/project_2/barricas-inhavited.png';
 
-import project3 from '@/assets/project_3/project_3.jpeg';
+import project3 from '@/assets/project_3/project-3.jpeg';
 
 export interface Project {
   id: string;

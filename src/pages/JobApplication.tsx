@@ -3,7 +3,7 @@ import { Download, Mail, Linkedin, ExternalLink, MapPin, Briefcase, GraduationCa
 import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import architectPortrait from '@/assets/FOTITO.jpg';
+import architectPortrait from '@/assets/fotito.jpg';
 
 
 const experience = [

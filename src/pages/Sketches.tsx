@@ -3,16 +3,16 @@ import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Lightbox from '@/components/Lightbox';
-import img1 from '@/assets/sketches/10FC248A-F141-476F-B51D-4157046C0B26.JPG';
-import img2 from '@/assets/sketches/Escaner_20240509_6.png';
-import img3 from '@/assets/sketches/SKETCHing.jpg';
-import img4 from '@/assets/sketches/SPATIAL_ITERATIONS_1.jpg';
-import img5 from '@/assets/sketches/SPATIAL_ITERATIONS_2.jpg';
-import img6 from '@/assets/sketches/Untitled-5.jpg';
+import img1 from '@/assets/sketches/10fc248a-f141-476f-b51d-4157046c0b26.jpg';
+import img2 from '@/assets/sketches/escaner-20240509-6.png';
+import img3 from '@/assets/sketches/sketching.jpg';
+import img4 from '@/assets/sketches/spatial-iterations-1.jpg';
+import img5 from '@/assets/sketches/spatial-iterations-2.jpg';
+import img6 from '@/assets/sketches/untitled-5.jpg';
 import img7 from '@/assets/sketches/sketches.jpg';
-import img8 from '@/assets/sketches/sketchiing.JPG';
-import img9 from '@/assets/sketches/faltaba_1.jpeg';
-import img10 from '@/assets/sketches/faltaba_2.jpeg';
+import img8 from '@/assets/sketches/sketchiing.jpg';
+import img9 from '@/assets/sketches/faltaba-1.jpeg';
+import img10 from '@/assets/sketches/faltaba-2.jpeg';
 
 interface Sketch {
   id: string;

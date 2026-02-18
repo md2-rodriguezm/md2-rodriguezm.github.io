@@ -6,18 +6,18 @@ import Footer from '@/components/Footer';
 import Lightbox from '@/components/Lightbox';
 
 // The Gambia images
-import gambia1 from '@/assets/CROSS-CULTURAL/THE GAMBIA/gambia.png';
-import gambia2 from '@/assets/CROSS-CULTURAL/THE GAMBIA/IMG_0950.JPG';
-import gambia3 from '@/assets/CROSS-CULTURAL/THE GAMBIA/59dd8ba2-4d07-4b8b-b70f-b7ccd2fff192.JPG';
-import gambia4 from '@/assets/CROSS-CULTURAL/THE GAMBIA/8d9abe02-c509-4602-9a19-8ac0950aa31a.JPG';
-import gambia5 from '@/assets/CROSS-CULTURAL/THE GAMBIA/c194f246-0768-49ee-8396-f9fa667a7376.JPG';
+import gambia1 from '@/assets/cross-cultural/the-gambia/gambia.png';
+import gambia2 from '@/assets/cross-cultural/the-gambia/img-0950.jpg';
+import gambia3 from '@/assets/cross-cultural/the-gambia/59dd8ba2-4d07-4b8b-b70f-b7ccd2fff192.jpg';
+import gambia4 from '@/assets/cross-cultural/the-gambia/8d9abe02-c509-4602-9a19-8ac0950aa31a.jpg';
+import gambia5 from '@/assets/cross-cultural/the-gambia/c194f246-0768-49ee-8396-f9fa667a7376.jpg';
 
 // Grand Iftar image
-import iftarImg from '@/assets/CROSS-CULTURAL/ST MARKS RD AND COMMUNITY/COMMUNITY GRAND IFTAR.jpg';
+import iftarImg from '@/assets/cross-cultural/st-marks-rd-and-community/community-grand-iftar.jpg';
 
 // MUN images
-import mun1 from '@/assets/CROSS-CULTURAL/MUN/IMG_2525.JPG';
-import mun2 from '@/assets/CROSS-CULTURAL/MUN/escaner_pc1_21_20191129_145924.jpg';
+import mun1 from '@/assets/cross-cultural/mun/img-2525.jpg';
+import mun2 from '@/assets/cross-cultural/mun/escaner-pc1-21-20191129-145924.jpg';
 
 interface JournalEntry {
   id: string;
