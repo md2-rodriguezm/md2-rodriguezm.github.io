@@ -73,7 +73,7 @@ export default function Index() {
                   <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
                 </Link>
                 <a
-                  href="/MDRM_Portfolio.pdf"
+                  href={`${import.meta.env.BASE_URL}MDRM_Portfolio.pdf`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 px-8 py-4 border border-foreground/30 text-foreground text-xs uppercase tracking-[0.2em] hover:bg-foreground/10 backdrop-blur-sm transition-colors focus-ring"
@@ -82,7 +82,7 @@ export default function Index() {
                   Download Portfolio
                 </a>
                 <a
-                  href="/Martina_D_Rodriguez_Marrero_CV.pdf"
+                  href={`${import.meta.env.BASE_URL}Martina_D_Rodriguez_Marrero_CV.pdf`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 px-8 py-4 border border-foreground/30 text-foreground text-xs uppercase tracking-[0.2em] hover:bg-foreground/10 backdrop-blur-sm transition-colors focus-ring"

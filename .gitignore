@@ -25,5 +25,5 @@ node_modules
 
 # Large media files
 *.mp4
-*.pdf
+src/assets/**/*.pdf
 src/assets/RESEARCH & PAPERS/

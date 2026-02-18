@@ -116,7 +116,7 @@ export default function JobApplication() {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
-                  href="/MDRM_Portfolio.pdf"
+                  href={`${import.meta.env.BASE_URL}MDRM_Portfolio.pdf`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-heading uppercase tracking-widest text-sm hover:bg-primary/90 transition-colors focus-ring"
@@ -125,7 +125,7 @@ export default function JobApplication() {
                   Download Portfolio
                 </a>
                 <a
-                  href="/Martina_D_Rodriguez_Marrero_CV.pdf"
+                  href={`${import.meta.env.BASE_URL}Martina_D_Rodriguez_Marrero_CV.pdf`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 px-8 py-4 border border-primary text-primary font-heading uppercase tracking-widest text-sm hover:bg-primary hover:text-primary-foreground transition-colors focus-ring"
