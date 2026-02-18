@@ -1,10 +1,23 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Calendar, Users } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import project4 from '@/assets/project-4.jpg';
-import project5 from '@/assets/project-5.jpg';
-import project6 from '@/assets/project-6.jpg';
+import Lightbox from '@/components/Lightbox';
+
+// The Gambia images
+import gambia1 from '@/assets/CROSS-CULTURAL/THE GAMBIA/gambia.png';
+import gambia2 from '@/assets/CROSS-CULTURAL/THE GAMBIA/IMG_0950.JPG';
+import gambia3 from '@/assets/CROSS-CULTURAL/THE GAMBIA/59dd8ba2-4d07-4b8b-b70f-b7ccd2fff192.JPG';
+import gambia4 from '@/assets/CROSS-CULTURAL/THE GAMBIA/8d9abe02-c509-4602-9a19-8ac0950aa31a.JPG';
+import gambia5 from '@/assets/CROSS-CULTURAL/THE GAMBIA/c194f246-0768-49ee-8396-f9fa667a7376.JPG';
+
+// Grand Iftar image
+import iftarImg from '@/assets/CROSS-CULTURAL/ST MARKS RD AND COMMUNITY/COMMUNITY GRAND IFTAR.jpg';
+
+// MUN images
+import mun1 from '@/assets/CROSS-CULTURAL/MUN/IMG_2525.JPG';
+import mun2 from '@/assets/CROSS-CULTURAL/MUN/escaner_pc1_21_20191129_145924.jpg';
 
 interface JournalEntry {
   id: string;
@@ -13,79 +26,54 @@ interface JournalEntry {
   year: string;
   collaborators: string;
   image: string;
-  entries: { date: string; text: string }[];
+  gallery: string[];
+  description: string;
 }
 
 const journalEntries: JournalEntry[] = [
   {
     id: 'the-gambia',
-    title: 'The Gambia — Community School Build',
-    location: 'Brikama, The Gambia',
-    year: '2021–2022',
-    collaborators: 'ASF España, Local Masons Guild',
-    image: project4,
-    entries: [
-      {
-        date: 'Day 01 — Arrival',
-        text: 'Landed in Banjul at dusk. The humidity hit immediately. Met Amadou, the village liaison, who drove us three hours inland to Brikama. The site is a cleared plot behind the existing primary school—red laterite earth, mango trees marking the boundary.'
-      },
-      {
-        date: 'Day 14 — Foundations',
-        text: 'The compressed earth blocks are curing well. We adapted the mix ratio after soil testing revealed higher clay content than expected. The masons taught us their bonding pattern—more efficient than what we had drawn. The design evolved on site.'
-      },
-      {
-        date: 'Day 42 — Handover',
-        text: 'The school was inaugurated today with a ceremony that involved the entire village. Three classrooms, a covered courtyard, and rainwater collection. The children sang. Architecture disappeared into use—exactly as it should.'
-      },
-    ],
+    title: 'The Gambia — Daughters of Africa NGO',
+    location: 'Abuko, The Gambia',
+    year: '2024/2025',
+    collaborators: 'Daughters of Africa NGO, USET',
+    image: gambia1,
+    gallery: [gambia1, gambia2, gambia3, gambia4, gambia5],
+    description: 'For the Daigo 9 Project, my team worked with the Daughters of Africa NGO to achieve eco-tourism projects for the Abuko Wild-Life Park in the Gambia. Collaborating with Gambian students from the University of Science Engineering and Technology (USET) helped us finalise plans and construct the bird hides within a 2 week time frame, using local material, such as raphia fibre. I had the opportunity to organise and lead an architecture course on perspective and spatial awareness at St. Peter\'s Technical Junior and Senior School in Lamin, where we learned to appreciate different points of view and adjust our original cultural and environmental aims.\n\nCollaborative decisionmaking with the NGO enhanced local ownership and efficiency. As Godfrey (1996) notes, "there are considerable differences between truly international work and performing work at home for a foreign location," highlighting the importance of respecting local contexts. These efforts embodied the UWE 2030 strategy as a "catalyst for social change," linking expertise with communities to create sustainable solutions. The project demonstrated all RIBA stages, up to the in-use phase. Stakeholders saw our ideas reflected in the final outcomes, fostering trust and a sense of ownership.',
   },
   {
     id: 'grand-iftar',
-    title: 'Grand Iftar — Public Space Activation',
-    location: 'Lavapiés, Madrid',
-    year: '2022',
-    collaborators: 'Casa Árabe, Collective MUR',
-    image: project5,
-    entries: [
-      {
-        date: 'Concept',
-        text: 'The Grand Iftar project transforms a public square during Ramadan into a shared dining space for 300 people. The intervention is deliberately temporary—a long table, fabric canopies, and lighting designed to create intimacy at urban scale.'
-      },
-      {
-        date: 'Build Week',
-        text: 'Volunteers from twelve different cultural associations assembled the structure over five days. The modular timber frame system we designed allowed non-specialists to build without power tools. Every joint is a wedge connection.'
-      },
-      {
-        date: 'The Evening',
-        text: 'Three hundred strangers sat together at sundown. The canopy softened the hard plaza into something resembling a room. Conversations crossed languages. The architecture was the table and the light—nothing more was needed.'
-      },
-    ],
+    title: 'The Grand Iftar in St. Marks Road, Bristol',
+    location: 'Easton, Bristol',
+    year: '2024/2025',
+    collaborators: 'Bristol Sweetmart, Bhogal\'s, Gulzar\'s',
+    image: iftarImg,
+    gallery: [iftarImg],
+    description: 'The Grand Iftar is an event that Bristol has been hosting for the last few years during the month of Ramadan. The event takes place on St Marks Road in Easton, Bristol.\n\nThe event encourages all ethnicities and backgrounds to join muslims in breaking their fast. It also invites people to join in and fast and get the whole experience.\n\nThe Grand Iftar is very special as the whole road has an involvement in putting the event together, the local restaurants help with providing the food and decorations.\n\nWe, students of Masters of Architecture were tasked with designing a roof/shelter to cover St Marks Road. Ramadan moves back by around 10 days every year meaning the weather will be getting colder as we head into winter. The roof will protect the event taking place and shelter the attendees from harsh weather conditions.',
   },
   {
-    id: 'mur',
-    title: 'MUR — Urban Research Collective',
-    location: 'Various, Spain & Morocco',
-    year: '2020–Present',
-    collaborators: 'MUR Collective (co-founder)',
-    image: project6,
-    entries: [
-      {
-        date: 'Origins',
-        text: 'MUR began as a reading group in the final year of architecture school—five students frustrated by the distance between academic discourse and the built reality of our neighbourhoods. We started mapping vacancy in Madrid\'s historic centre.'
-      },
-      {
-        date: 'Methodology',
-        text: 'Our process: walk, map, talk, draw, build. Each project begins with weeks of fieldwork before a single line is drawn. We document through photography, interviews, and hand-drawn surveys. The drawings become the project brief.'
-      },
-      {
-        date: 'Current Work',
-        text: 'We are currently working on a cross-border study of informal market architectures in northern Morocco and southern Spain—how commerce shapes space without architects, and what we can learn from those spatial logics.'
-      },
-    ],
+    id: 'mun',
+    title: 'Model United Nations (THIMUN)',
+    location: 'The Hague, Netherlands',
+    year: 'Jan 2018, 2019 & 2020',
+    collaborators: 'THIMUN, MUNITY Press Team',
+    image: mun1,
+    gallery: [mun1, mun2],
+    description: 'In THIMUN, I had the opportunity to be a delegate representing Australia and Cape Verde in the Economic and Social Council, focusing on the issue of "Encouraging the Private Sector to Invest in Developing Educational Tools and Facilities."\n\nI was also an artist in the MUNITY Press Team, where I illustrated global issues fostering political, economic and social growth.\n\n"Human impact, environmental change, global warming crisis, poverty, the great diminishment of the wilderness! These don\'t even comprise 50% of the potential disasters we create. Miracles, the \'I\'ll do this tomorrow\'... don\'t exist any more. This must be done today. Hence, this is one of the most, if not the most important thing you may have on your \'to do\' lists.\n\nLet\'s open our eyes, let\'s be aware of our harmful situation and let\'s contribute to our planet which needs us as much as it needs the brightness of the sun."',
   },
 ];
 
 export default function CrossCultural() {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+  const [lightboxImages, setLightboxImages] = useState<string[]>([]);
+
+  const openLightbox = (images: string[], index: number) => {
+    setLightboxImages(images);
+    setLightboxIndex(index);
+    setLightboxOpen(true);
+  };
+
   return (
     <>
       <Navbar />
@@ -102,7 +90,7 @@ export default function CrossCultural() {
               <h1 className="heading-lg mt-4">Cross-Cultural Collaboration</h1>
               <div className="w-16 h-px bg-primary mt-6" />
               <p className="body-md text-muted-foreground mt-8 max-w-2xl">
-                International projects, community builds, and social practice—architecture 
+                International projects, community builds, and social practice—architecture
                 as a tool for dialogue and exchange.
               </p>
             </motion.div>
@@ -112,7 +100,7 @@ export default function CrossCultural() {
         {/* Journal Entries */}
         <section className="pb-32 bg-background">
           <div className="section-container">
-            {journalEntries.map((entry, entryIndex) => (
+            {journalEntries.map((entry) => (
               <motion.article
                 key={entry.id}
                 initial={{ opacity: 0, y: 40 }}
@@ -140,29 +128,45 @@ export default function CrossCultural() {
                   <h2 className="heading-md text-foreground">{entry.title}</h2>
                 </div>
 
-                {/* Image */}
-                <div className="image-container aspect-[21/9] mb-12">
+                {/* Main Image */}
+                <button
+                  onClick={() => openLightbox(entry.gallery, 0)}
+                  className="w-full image-container aspect-[21/9] mb-8 cursor-pointer focus-ring"
+                  aria-label={`View ${entry.title} gallery`}
+                >
                   <img
                     src={entry.image}
                     alt={`${entry.title} — field documentation`}
                     className="w-full h-full object-cover"
                   />
-                </div>
+                </button>
 
-                {/* Log Entries */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-                  {entry.entries.map((log, logIndex) => (
-                    <motion.div
-                      key={logIndex}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: logIndex * 0.1 }}
-                      className="border-l border-border-subtle pl-6"
-                    >
-                      <span className="caption text-primary block mb-3">{log.date}</span>
-                      <p className="body-md text-muted-foreground leading-relaxed">{log.text}</p>
-                    </motion.div>
+                {/* Gallery Thumbnails */}
+                {entry.gallery.length > 1 && (
+                  <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 mb-12">
+                    {entry.gallery.slice(1).map((img, i) => (
+                      <button
+                        key={i}
+                        onClick={() => openLightbox(entry.gallery, i + 1)}
+                        className="image-container aspect-square cursor-pointer focus-ring border border-border-subtle"
+                        aria-label={`View image ${i + 2}`}
+                      >
+                        <img
+                          src={img}
+                          alt={`${entry.title} gallery ${i + 2}`}
+                          className="w-full h-full object-cover"
+                        />
+                      </button>
+                    ))}
+                  </div>
+                )}
+
+                {/* Description */}
+                <div className="max-w-3xl space-y-4">
+                  {entry.description.split('\n\n').map((paragraph, i) => (
+                    <p key={i} className="body-md text-muted-foreground leading-relaxed">
+                      {paragraph}
+                    </p>
                   ))}
                 </div>
               </motion.article>
@@ -171,6 +175,14 @@ export default function CrossCultural() {
         </section>
       </main>
       <Footer />
+
+      <Lightbox
+        images={lightboxImages}
+        currentIndex={lightboxIndex}
+        isOpen={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+        onNavigate={setLightboxIndex}
+      />
     </>
   );
 }

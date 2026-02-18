@@ -51,9 +51,11 @@ export default function Index() {
                 transition={{ duration: 0.8, delay: 1.0 }}
                 className="text-base md:text-lg font-light text-muted-foreground tracking-wide max-w-lg mx-auto mb-12"
               >
-                Creating spaces where light, form, and function
+                Sharing the identity of architectural intimacies:
                 <br className="hidden md:block" />
-                converge in perfect harmony
+                part of the building massing that propagates
+                <br className="hidden md:block" />
+                in response to the recurring times.
               </motion.p>
 
               {/* CTA Buttons */}
@@ -67,11 +69,22 @@ export default function Index() {
                   to="/projects"
                   className="group inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground text-xs uppercase tracking-[0.2em] hover:bg-primary/90 transition-colors focus-ring"
                 >
-                  View Portfolio
+                  View Projects
                   <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
                 </Link>
                 <a
-                  href="#"
+                  href="/MDRM_Portfolio.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 px-8 py-4 border border-foreground/30 text-foreground text-xs uppercase tracking-[0.2em] hover:bg-foreground/10 backdrop-blur-sm transition-colors focus-ring"
+                >
+                  <Download size={16} />
+                  Download Portfolio
+                </a>
+                <a
+                  href="/Martina_D_Rodriguez_Marrero_CV.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 px-8 py-4 border border-foreground/30 text-foreground text-xs uppercase tracking-[0.2em] hover:bg-foreground/10 backdrop-blur-sm transition-colors focus-ring"
                 >
                   <Download size={16} />

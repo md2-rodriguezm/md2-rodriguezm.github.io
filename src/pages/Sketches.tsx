@@ -11,6 +11,8 @@ import img5 from '@/assets/sketches/SPATIAL_ITERATIONS_2.jpg';
 import img6 from '@/assets/sketches/Untitled-5.jpg';
 import img7 from '@/assets/sketches/sketches.jpg';
 import img8 from '@/assets/sketches/sketchiing.JPG';
+import img9 from '@/assets/sketches/faltaba_1.jpeg';
+import img10 from '@/assets/sketches/faltaba_2.jpeg';
 
 interface Sketch {
   id: string;
@@ -28,6 +30,8 @@ const sketches: Sketch[] = [
   { id: '6', title: 'Sketching Process', medium: 'Photography', image: img3 },
   { id: '7', title: 'Design Development', medium: 'Mixed Media', image: img7 },
   { id: '8', title: 'Studio Work', medium: 'Photography', image: img8 },
+  { id: '9', title: 'Conceptual Study I', medium: 'Hand Sketch', image: img9 },
+  { id: '10', title: 'Conceptual Study II', medium: 'Hand Sketch', image: img10 },
 ];
 
 export default function Sketches() {

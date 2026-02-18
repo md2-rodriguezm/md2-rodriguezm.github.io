@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import necaLogo from '@/assets/NECA.png';
 
 const navLinks = [
   { name: 'Projects', href: '/projects' },
@@ -43,8 +44,9 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             to="/"
-            className="font-heading text-xl tracking-tight text-foreground hover:text-primary transition-colors focus-ring"
+            className="flex items-center gap-2 font-heading text-xl tracking-tight text-foreground hover:text-primary transition-colors focus-ring"
           >
+            <img src={necaLogo} alt="MDRM Logo" className="h-8 w-auto" />
             MDRM<span className="text-primary">.</span>
           </Link>
 

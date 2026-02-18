@@ -4,15 +4,7 @@ import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import architectPortrait from '@/assets/FOTITO.jpg';
-import project1 from '@/assets/project-1.jpg';
-import project2 from '@/assets/project-2.jpg';
-import project3 from '@/assets/project-3.jpg';
 
-const topProjects = [
-  { id: 'research-centre', title: 'Research Centre', category: 'Institutional', image: project1 },
-  { id: 'bodega', title: 'Bodega', category: 'Commercial', image: project2 },
-  { id: 'hospital', title: 'Hospital', category: 'Healthcare', image: project3 },
-];
 
 const experience = [
   { period: '2022 – Present', role: 'Project Architect', firm: 'Independent Practice', location: 'Madrid' },
@@ -82,7 +74,7 @@ export default function JobApplication() {
                     <span className="caption">martina.rguezmarrero@gmail.com </span>
                   </a>
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/martina-drm/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
@@ -93,18 +85,10 @@ export default function JobApplication() {
                 </div>
 
                 <p className="body-lg text-muted-foreground leading-relaxed mb-10 max-w-2xl">
-                  Architect with 5+ years of professional experience across institutional,
-                  commercial, and healthcare typologies. My practice integrates rigorous
-                  technical resolution with a commitment to social responsibility and
-                  cross-cultural collaboration. Seeking opportunities to contribute to
-                  studios working at the intersection of design excellence and public impact.
+                  Architectural designer with six years of experience training in specializing in high-performance infrastructure rooted in local responsiveness and efficiency. My approach conveys computational methods that emerge from a preliminary understanding of spatial adaptability informed by data-driven design processes.Beyond the technical, I am passionate about wellbeing and motion, where reflecting on architectural sequences as time-lapse episodes, such as the pause at a glass corner where one can anticipate views, embodies sensing the vitality of the built environment. Driven by the belief that attention to human experience has strengthened my cross-cultural communication skills through international collaboration, I am willing to contribute to an architectural practice that balances performative rigor with expressive clarity.
                 </p>
 
-                {/* Download CTA */}
-                <button className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-heading uppercase tracking-widest text-sm hover:bg-primary/90 transition-colors focus-ring">
-                  <Download size={18} />
-                  Download Full Portfolio
-                </button>
+
               </motion.div>
             </div>
           </div>
@@ -113,71 +97,8 @@ export default function JobApplication() {
         {/* Top Projects */}
 
 
-        {/* CV Section */}
-        <section className="py-20 bg-background border-t border-border-subtle">
-          <div className="section-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
-              {/* Experience */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              >
-                <div className="flex items-center gap-3 mb-8">
-                  <Briefcase size={18} className="text-primary" />
-                  <h2 className="font-heading text-xl uppercase tracking-widest">Experience</h2>
-                </div>
-                <div className="space-y-8">
-                  {experience.map((exp, index) => (
-                    <div key={index} className="border-l border-border-subtle pl-6">
-                      <span className="caption text-primary block mb-1">{exp.period}</span>
-                      <h3 className="font-heading text-lg text-foreground">{exp.role}</h3>
-                      <p className="body-md text-muted-foreground">{exp.firm} — {exp.location}</p>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
 
-              {/* Education */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-              >
-                <div className="flex items-center gap-3 mb-8">
-                  <GraduationCap size={18} className="text-primary" />
-                  <h2 className="font-heading text-xl uppercase tracking-widest">Education</h2>
-                </div>
-                <div className="space-y-8">
-                  {education.map((edu, index) => (
-                    <div key={index} className="border-l border-border-subtle pl-6">
-                      <span className="caption text-primary block mb-1">{edu.period}</span>
-                      <h3 className="font-heading text-lg text-foreground">{edu.degree}</h3>
-                      <p className="body-md text-muted-foreground">{edu.institution}</p>
-                    </div>
-                  ))}
-                </div>
 
-                {/* Skills */}
-                <div className="mt-16">
-                  <h2 className="font-heading text-xl uppercase tracking-widest mb-8">Skills & Languages</h2>
-                  <div className="flex flex-wrap gap-2">
-                    {skills.map((skill) => (
-                      <span
-                        key={skill}
-                        className="caption px-4 py-2 border border-border text-muted-foreground"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
 
         {/* Bottom CTA */}
         <section className="py-20 bg-background-deep border-t border-border-subtle">
@@ -191,15 +112,29 @@ export default function JobApplication() {
               <h2 className="heading-md mb-6">Interested in working together?</h2>
               <p className="body-md text-muted-foreground mb-10 max-w-lg mx-auto">
                 I'm open to studio positions, collaborations, and freelance commissions.
-                Download the full portfolio or get in touch directly.
+                Download the full portfolio or CV, or get in touch directly.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <button className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-heading uppercase tracking-widest text-sm hover:bg-primary/90 transition-colors focus-ring">
-                  <Download size={18} />
-                  Download Full Portfolio
-                </button>
                 <a
-                  href="mailto:martina.rguezmarrero@gmail.com "
+                  href="/MDRM_Portfolio.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-heading uppercase tracking-widest text-sm hover:bg-primary/90 transition-colors focus-ring"
+                >
+                  <Download size={18} />
+                  Download Portfolio
+                </a>
+                <a
+                  href="/Martina_D_Rodriguez_Marrero_CV.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 px-8 py-4 border border-primary text-primary font-heading uppercase tracking-widest text-sm hover:bg-primary hover:text-primary-foreground transition-colors focus-ring"
+                >
+                  <Download size={18} />
+                  Download CV
+                </a>
+                <a
+                  href="mailto:martina.rguezmarrero@gmail.com"
                   className="inline-flex items-center gap-3 px-8 py-4 border border-border text-foreground font-heading uppercase tracking-widest text-sm hover:border-primary hover:text-primary transition-colors focus-ring"
                 >
                   <Mail size={18} />

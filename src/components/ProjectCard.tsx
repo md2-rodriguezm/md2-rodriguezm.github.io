@@ -27,7 +27,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             alt={`${project.title} - ${project.category} architecture in ${project.location}`}
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
-          
+
           {/* Overlay */}
           <div className="project-card-overlay flex flex-col justify-end p-6">
             <span className="caption text-primary mb-2">{project.category}</span>
@@ -43,8 +43,8 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
               <span className="caption">{project.label}</span>
             </div>
             {project.status === 'wip' && (
-              <div className="px-3 py-1 bg-primary/20 border border-primary/40">
-                <span className="caption text-primary">WIP</span>
+              <div className="px-3 py-1 bg-orange-500/90 border border-orange-400">
+                <span className="caption text-white font-semibold">WIP</span>
               </div>
             )}
           </div>

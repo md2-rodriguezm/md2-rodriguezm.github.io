@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Linkedin } from 'lucide-react';
 
 const socialLinks = [
-  { name: 'LinkedIn', href: 'https://linkedin.com', icon: Linkedin },
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/in/martina-drm/', icon: Linkedin },
 ];
 
 export default function Footer() {

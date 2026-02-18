@@ -30,7 +30,7 @@ export default function ProjectDetail() {
   return (
     <>
       <Navbar />
-      
+
       <main>
         {/* Hero */}
         <section className="relative h-[70vh] md:h-[80vh]">
@@ -49,7 +49,7 @@ export default function ProjectDetail() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <span className="caption text-primary">{project.category}</span>
+              <span className="caption text-primary">{project.subtitle}</span>
               <h1 className="heading-xl mt-4">{project.title}</h1>
               <p className="body-lg text-muted-foreground mt-4">{project.location}</p>
             </motion.div>
@@ -69,9 +69,13 @@ export default function ProjectDetail() {
                 className="lg:col-span-2"
               >
                 <h2 className="heading-md mb-8">About the Project</h2>
-                <p className="body-lg text-muted-foreground leading-relaxed">
-                  {project.description}
-                </p>
+                <div className="space-y-6">
+                  {project.description.split('\n\n').map((paragraph, i) => (
+                    <p key={i} className="body-lg text-muted-foreground leading-relaxed">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
               </motion.div>
 
               {/* Details */}
@@ -107,6 +111,33 @@ export default function ProjectDetail() {
           </div>
         </section>
 
+        {/* Video */}
+        {project.videoUrl && (
+          <section className="section-py bg-background border-t border-border-subtle">
+            <div className="section-container">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="mb-8"
+              >
+                <span className="caption text-primary">Video</span>
+                <h2 className="heading-md mt-4">Project Presentation</h2>
+              </motion.div>
+              <div className="relative w-full aspect-video border border-border-subtle overflow-hidden">
+                <iframe
+                  src={project.videoUrl}
+                  title={`${project.title} — Video`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Gallery */}
         <section className="section-py bg-background-deep border-t border-border-subtle">
           <div className="section-container">
@@ -130,9 +161,8 @@ export default function ProjectDetail() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   onClick={() => openLightbox(index)}
-                  className={`image-container aspect-[4/3] focus-ring cursor-pointer ${
-                    index === 0 ? 'md:col-span-2 md:aspect-[16/9]' : ''
-                  }`}
+                  className={`image-container aspect-[4/3] focus-ring cursor-pointer ${index === 0 ? 'md:col-span-2 md:aspect-[16/9]' : ''
+                    }`}
                   aria-label={`View image ${index + 1} in fullscreen`}
                 >
                   <img
