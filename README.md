@@ -1,4 +1,4 @@
-# Modernist Muse
+# Portfolio
 
 ## Project setup
 

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import heroImage from '@/assets/hero-architecture.jpg';
+import background from '@/assets/background.png';
 
 export default function Index() {
   return (
@@ -15,7 +16,7 @@ export default function Index() {
           {/* Background Image */}
           <div className="absolute inset-0">
             <img
-              src={heroImage}
+              src={background}
               alt="Modern architecture with geometric concrete forms and dramatic lighting"
               className="w-full h-full object-cover"
             />
@@ -38,7 +39,7 @@ export default function Index() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
-                className="text-5xl md:text-7xl lg:text-8xl font-light tracking-[-0.04em] text-foreground mb-6"
+                className="text-4xl md:text-6xl lg:text-7xl font-light tracking-[-0.04em] text-foreground mb-6"
               >
                 Martina D. Rodríguez Marrero
               </motion.h1>
@@ -81,8 +82,7 @@ export default function Index() {
           </motion.div>
 
           {/* Decorative Lines */}
-          <div className="absolute left-6 md:left-12 top-1/2 -translate-y-1/2 w-px h-24 bg-border-subtle" />
-          <div className="absolute right-6 md:right-12 top-1/2 -translate-y-1/2 w-px h-24 bg-border-subtle" />
+
         </section>
       </main>
       <Footer />

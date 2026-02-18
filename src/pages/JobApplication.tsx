@@ -3,7 +3,7 @@ import { Download, Mail, Linkedin, ExternalLink, MapPin, Briefcase, GraduationCa
 import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import architectPortrait from '@/assets/architect-portrait.jpg';
+import architectPortrait from '@/assets/FOTITO.jpg';
 import project1 from '@/assets/project-1.jpg';
 import project2 from '@/assets/project-2.jpg';
 import project3 from '@/assets/project-3.jpg';
@@ -28,7 +28,7 @@ const education = [
 const skills = [
   'AutoCAD', 'Revit', 'Rhinoceros', 'Grasshopper', 'V-Ray',
   'Adobe Suite', 'Blender', 'ArchiCAD', 'SketchUp', 'Hand Drawing',
-  'Spanish (Native)', 'English (C2)', 'French (B1)', 'Arabic (A2)'
+  'Spanish (Native)', 'English (C1)', 'French (C1)'
 ];
 
 export default function JobApplication() {
@@ -63,7 +63,7 @@ export default function JobApplication() {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="lg:col-span-8"
               >
-                <span className="caption text-primary">Portfolio — 2025</span>
+                <span className="caption text-primary">Portfolio</span>
                 <h1 className="heading-lg mt-4 mb-4">Martina D. Rodríguez Marrero</h1>
                 <p className="font-heading text-xl text-muted-foreground mb-8">
                   Architect · Researcher · M.Arch
@@ -72,14 +72,14 @@ export default function JobApplication() {
                 <div className="flex flex-wrap gap-4 mb-10">
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <MapPin size={14} className="text-primary" />
-                    <span className="caption">Madrid, Spain</span>
+                    <span className="caption">Las Palmas de Gran Canaria, Spain</span>
                   </div>
                   <a
-                    href="mailto:hello@marcuschen.arch"
+                    href="mailto:martina.rguezmarrero@gmail.com "
                     className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
                   >
                     <Mail size={14} className="text-primary" />
-                    <span className="caption">hello@marcuschen.arch</span>
+                    <span className="caption">martina.rguezmarrero@gmail.com </span>
                   </a>
                   <a
                     href="https://linkedin.com"
@@ -111,51 +111,7 @@ export default function JobApplication() {
         </section>
 
         {/* Top Projects */}
-        <section className="py-20 bg-background-deep border-t border-border-subtle">
-          <div className="section-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="mb-12"
-            >
-              <span className="caption text-primary">Selected Work</span>
-              <h2 className="heading-md mt-4">Top Projects</h2>
-            </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {topProjects.map((project, index) => (
-                <motion.div
-                  key={project.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <Link
-                    to={`/project/${project.id}`}
-                    className="group block focus-ring"
-                  >
-                    <div className="image-container aspect-[4/3]">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="mt-3">
-                      <span className="caption text-primary">{project.category}</span>
-                      <h3 className="font-heading text-lg text-foreground group-hover:text-primary transition-colors mt-1">
-                        {project.title}
-                      </h3>
-                    </div>
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* CV Section */}
         <section className="py-20 bg-background border-t border-border-subtle">
@@ -243,7 +199,7 @@ export default function JobApplication() {
                   Download Full Portfolio
                 </button>
                 <a
-                  href="mailto:hello@marcuschen.arch"
+                  href="mailto:martina.rguezmarrero@gmail.com "
                   className="inline-flex items-center gap-3 px-8 py-4 border border-border text-foreground font-heading uppercase tracking-widest text-sm hover:border-primary hover:text-primary transition-colors focus-ring"
                 >
                   <Mail size={18} />

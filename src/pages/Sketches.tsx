@@ -3,12 +3,14 @@ import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Lightbox from '@/components/Lightbox';
-import project1 from '@/assets/project-1.jpg';
-import project2 from '@/assets/project-2.jpg';
-import project3 from '@/assets/project-3.jpg';
-import project4 from '@/assets/project-4.jpg';
-import project5 from '@/assets/project-5.jpg';
-import project6 from '@/assets/project-6.jpg';
+import img1 from '@/assets/sketches/10FC248A-F141-476F-B51D-4157046C0B26.JPG';
+import img2 from '@/assets/sketches/Escaner_20240509_6.png';
+import img3 from '@/assets/sketches/SKETCHing.jpg';
+import img4 from '@/assets/sketches/SPATIAL_ITERATIONS_1.jpg';
+import img5 from '@/assets/sketches/SPATIAL_ITERATIONS_2.jpg';
+import img6 from '@/assets/sketches/Untitled-5.jpg';
+import img7 from '@/assets/sketches/sketches.jpg';
+import img8 from '@/assets/sketches/sketchiing.JPG';
 
 interface Sketch {
   id: string;
@@ -18,12 +20,14 @@ interface Sketch {
 }
 
 const sketches: Sketch[] = [
-  { id: '1', title: 'Research Centre — Concept Sketch', medium: 'Graphite on trace', image: project1 },
-  { id: '2', title: 'Bodega — Section Detail', medium: 'Ink on vellum', image: project2 },
-  { id: '3', title: 'Hospital — Structural Detail', medium: 'Technical pen, 0.3mm', image: project3 },
-  { id: '4', title: 'Wall Section — Earth Block Construction', medium: 'Pencil & watercolour', image: project4 },
-  { id: '5', title: 'Canopy Joint — Grand Iftar', medium: 'Ink on Kraft paper', image: project5 },
-  { id: '6', title: 'Foundation Detail — Laterite Base', medium: 'Graphite, 1:5 scale', image: project6 },
+  { id: '1', title: 'Spatial Iteration I', medium: 'Process Sketch', image: img4 },
+  { id: '2', title: 'Spatial Iteration II', medium: 'Process Sketch', image: img5 },
+  { id: '3', title: 'Architectural Detail', medium: 'Technical Drawing', image: img2 },
+  { id: '4', title: 'Structural Concept', medium: 'Digital Sketch', image: img6 },
+  { id: '5', title: 'Form Study', medium: 'Hand Sketch', image: img1 },
+  { id: '6', title: 'Sketching Process', medium: 'Photography', image: img3 },
+  { id: '7', title: 'Design Development', medium: 'Mixed Media', image: img7 },
+  { id: '8', title: 'Studio Work', medium: 'Photography', image: img8 },
 ];
 
 export default function Sketches() {
@@ -48,7 +52,7 @@ export default function Sketches() {
               <h1 className="heading-lg mt-4">Sketches & Tech. Drawing</h1>
               <div className="w-16 h-px bg-primary mt-6" />
               <p className="body-md text-muted-foreground mt-8 max-w-2xl">
-                The hand as instrument of thought—freehand sketches, construction details, 
+                The hand as instrument of thought—freehand sketches, construction details,
                 and technical drawings that trace the evolution of an idea.
               </p>
             </motion.div>
