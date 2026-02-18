@@ -9,9 +9,9 @@ import m1 from '@/assets/representation/modelling/experimental-model-label-templ
 import m2 from '@/assets/representation/modelling/model-bano-publico.jpg';
 import m3 from '@/assets/representation/modelling/sculpture.jpeg';
 import m4 from '@/assets/representation/modelling/img-7595.jpg';
-import m5 from '@/assets/representation/modelling/img-3339.heic';
-import m6 from '@/assets/representation/modelling/img-3347.heic';
-import m7 from '@/assets/representation/modelling/img-3355.heic';
+import m5 from '@/assets/representation/modelling/img-3339.jpg';
+import m6 from '@/assets/representation/modelling/img-3347.jpg';
+import m7 from '@/assets/representation/modelling/img-3355.jpg';
 
 // Paint
 import p1 from '@/assets/representation/paint/canary-marine-fish-stamps.png';
