@@ -9,6 +9,9 @@ import m1 from '@/assets/representation/modelling/experimental-model-label-templ
 import m2 from '@/assets/representation/modelling/model-bano-publico.jpg';
 import m3 from '@/assets/representation/modelling/sculpture.jpeg';
 import m4 from '@/assets/representation/modelling/img-7595.jpg';
+import m5 from '@/assets/representation/modelling/img-3339.heic';
+import m6 from '@/assets/representation/modelling/img-3347.heic';
+import m7 from '@/assets/representation/modelling/img-3355.heic';
 
 // Paint
 import p1 from '@/assets/representation/paint/canary-marine-fish-stamps.png';
@@ -45,6 +48,9 @@ const galleryItems: GalleryItem[] = [
   { id: 'm2', title: 'Public Bath Model', category: 'Physical Models', image: m2, aspect: 'aspect-[3/4]' },
   { id: 'm3', title: 'Sculptural Form', category: 'Physical Models', image: m3, aspect: 'aspect-[3/4]' },
   { id: 'm4', title: 'Model Detail', category: 'Physical Models', image: m4, aspect: 'aspect-[4/3]' },
+  { id: 'm5', title: 'Model Iteration I', category: 'Physical Models', image: m5, aspect: 'aspect-[4/3]' },
+  { id: 'm6', title: 'Model Iteration II', category: 'Physical Models', image: m6, aspect: 'aspect-[3/4]' },
+  { id: 'm7', title: 'Model Iteration III', category: 'Physical Models', image: m7, aspect: 'aspect-[4/3]' },
 
   // Paint
   { id: 'p1', title: 'Canary Marine Life', category: 'Paintings', image: p1, aspect: 'aspect-[4/3]' },
