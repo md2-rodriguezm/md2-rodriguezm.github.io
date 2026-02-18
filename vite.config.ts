@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => ({
     hmr: { overlay: false },
   },
   plugins: [react()],
-  assetsInclude: ["**/*.JPG"],
+  assetsInclude: ["**/*.JPG", "**/*.jpg", "**/*.png", "**/*.heic", "**/*.HEIC"],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
