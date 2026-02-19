@@ -12,7 +12,7 @@ export default function Index() {
       <Navbar />
       <main>
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
           {/* Background Image */}
           <div className="absolute inset-0">
             <img
@@ -28,9 +28,9 @@ export default function Index() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="relative z-10 mx-6 w-full max-w-3xl"
+            className="relative z-10 mx-4 w-full max-w-3xl"
           >
-            <div className="backdrop-blur-xl bg-background/30 border border-border/40 p-12 md:p-20 text-center shadow-2xl">
+            <div className="backdrop-blur-xl bg-background/30 border border-border/40 px-6 py-10 md:p-20 text-center shadow-2xl">
               {/* Caption */}
 
 
@@ -39,7 +39,7 @@ export default function Index() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
-                className="text-4xl md:text-6xl lg:text-7xl font-light tracking-[-0.04em] text-foreground mb-6"
+                className="text-3xl md:text-6xl lg:text-7xl font-light tracking-[-0.04em] text-foreground mb-4 md:mb-6"
               >
                 Martina D. Rodríguez Marrero
               </motion.h1>
@@ -49,7 +49,7 @@ export default function Index() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1.0 }}
-                className="text-base md:text-lg font-light text-muted-foreground tracking-wide max-w-lg mx-auto mb-12"
+                className="text-sm md:text-lg font-light text-muted-foreground tracking-wide max-w-lg mx-auto mb-8 md:mb-12"
               >
                 Sharing the identity of architectural intimacies:
                 <br className="hidden md:block" />
@@ -63,7 +63,7 @@ export default function Index() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1.2 }}
-                className="flex flex-col sm:flex-row items-center justify-center gap-4"
+                className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4"
               >
                 <Link
                   to="/projects"
