@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, lazy, Suspense } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -6,6 +6,11 @@ import { projects } from '@/data/projects';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Lightbox from '@/components/Lightbox';
+
+// Lazy-load the heavy Speckle BIM viewer — only loads when Project 3 is visited
+const BIMViewer = lazy(() =>
+  import('@/components/speckle/BIMViewer').then((m) => ({ default: m.BIMViewer }))
+);
 
 export default function ProjectDetail() {
   const { id } = useParams<{ id: string }>();
@@ -134,6 +139,60 @@ export default function ProjectDetail() {
                   className="absolute inset-0 w-full h-full"
                 />
               </div>
+            </div>
+          </section>
+        )}
+
+        {/* BIM Viewer — Project 3 (hospital) only */}
+        {project.id === 'hospital' && (
+          <section className="section-py bg-background border-t border-border-subtle">
+            <div className="section-container">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="mb-10"
+              >
+                <span className="caption text-primary">BIM / 3D Model</span>
+                <h2 className="heading-md mt-4">Interactive Building Model</h2>
+                <p className="body-md text-muted-foreground mt-3 max-w-2xl">
+                  Explore the full architectural model in 3D. Orbit, zoom and pan freely,
+                  or select building elements to inspect their properties.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: 0.2 }}
+              >
+                <Suspense
+                  fallback={
+                    <div
+                      className="w-full flex items-center justify-center"
+                      style={{
+                        height: 'clamp(480px, 65vh, 800px)',
+                        background: 'linear-gradient(135deg, #080808 0%, #0f0d0a 100%)',
+                        border: '1px solid rgba(255,255,255,0.06)',
+                      }}
+                    >
+                      <p className="caption text-muted-foreground animate-pulse">
+                        Loading viewer…
+                      </p>
+                    </div>
+                  }
+                >
+                  <BIMViewer
+                    title={project.title}
+                    subtitle={project.subtitle}
+                    location={project.location}
+                    year={project.year}
+                    description={project.description.slice(0, 220) + '…'}
+                  />
+                </Suspense>
+              </motion.div>
             </div>
           </section>
         )}
