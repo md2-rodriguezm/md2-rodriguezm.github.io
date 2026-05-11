@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 export default defineConfig(({ mode }) => ({
-  base: "./", // para usuario.github.io
+  base: "/", // para usuario.github.io (rutas absolutas para evitar errores en subpáginas)
   server: {
     host: "::",
     port: 8080,
