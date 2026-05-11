@@ -4,7 +4,7 @@ import {
   DefaultViewerParams,
   SpeckleLoader,
   ViewerEvent,
-  CameraController,
+  HybridCameraController,
   SelectionExtension,
   UrlHelper,
 } from '@speckle/viewer';
@@ -31,7 +31,7 @@ const EMBED_TOKEN = 'f4d5688997f8642a8031d1c4a7b5fab7ce55b28bd3';
 
 export function useSpeckleViewer(containerRef: React.RefObject<HTMLDivElement>) {
   const viewerRef = useRef<Viewer | null>(null);
-  const cameraRef = useRef<CameraController | null>(null);
+  const cameraRef = useRef<HybridCameraController | null>(null);
   const selectionRef = useRef<SelectionExtension | null>(null);
   const initializedRef = useRef(false);
 
@@ -61,7 +61,7 @@ export function useSpeckleViewer(containerRef: React.RefObject<HTMLDivElement>) 
         viewerRef.current = viewer;
 
         // Extensions
-        const camera = viewer.createExtension(CameraController);
+        const camera = viewer.createExtension(HybridCameraController);
         cameraRef.current = camera;
 
         const selection = viewer.createExtension(SelectionExtension);

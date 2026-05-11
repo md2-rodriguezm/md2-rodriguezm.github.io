@@ -23,7 +23,7 @@ export function SpeckleViewerCanvas({
       {/* Three.js canvas mount point */}
       <div
         ref={containerRef}
-        className="absolute inset-0 w-full h-full"
+        className="absolute inset-0 w-full h-full cursor-grab active:cursor-grabbing"
         style={{ background: 'transparent' }}
       />
       {/* Overlays rendered via render-prop pattern */}

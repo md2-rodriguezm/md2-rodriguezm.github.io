@@ -91,11 +91,22 @@ export function BIMViewer({ title, subtitle, location, year, description }: BIMV
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ delay: 1.5, duration: 1 }}
-            className="absolute bottom-6 right-6 z-10"
+            className="absolute bottom-4 right-4 md:bottom-6 md:right-6 z-10 hidden xs:flex flex-col items-end gap-1"
           >
-            <p className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground/50">
-              Orbit · Zoom · Click to select
+            <p className="text-[8px] md:text-[10px] uppercase tracking-[0.18em] text-primary/70 font-medium">
+              Navigation Guide
             </p>
+            <div className="flex flex-col items-end opacity-40">
+              <p className="text-[7px] md:text-[9px] uppercase tracking-[0.1em] text-muted-foreground">
+                Left Click · Orbit
+              </p>
+              <p className="text-[7px] md:text-[9px] uppercase tracking-[0.1em] text-muted-foreground">
+                Right Click · Pan
+              </p>
+              <p className="text-[7px] md:text-[9px] uppercase tracking-[0.1em] text-muted-foreground">
+                Scroll · Zoom
+              </p>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -105,8 +116,7 @@ export function BIMViewer({ title, subtitle, location, year, description }: BIMV
   return (
     <div
       ref={wrapperRef}
-      className="relative w-full"
-      style={{ height: 'clamp(480px, 65vh, 800px)' }}
+      className="relative w-full h-[400px] xs:h-[500px] md:h-[65vh] max-h-[800px]"
     >
       {/* Dark architectural background */}
       <div

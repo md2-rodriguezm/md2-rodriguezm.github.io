@@ -28,11 +28,11 @@ export function ViewerControls({ actions, onFullscreen, isLoaded }: ViewerContro
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : -10 }}
       transition={{ duration: 0.5 }}
-      className="absolute top-6 left-6 z-10 flex flex-col gap-2"
+      className="absolute top-4 left-4 md:top-6 md:left-6 z-10 flex flex-col gap-1.5 md:gap-2"
     >
       {/* View preset buttons */}
       <div
-        className="flex flex-col gap-1 p-2"
+        className="flex flex-col gap-0.5 md:gap-1 p-1.5 md:p-2"
         style={{
           background: 'rgba(8,8,8,0.75)',
           backdropFilter: 'blur(12px)',
@@ -41,7 +41,7 @@ export function ViewerControls({ actions, onFullscreen, isLoaded }: ViewerContro
           borderRadius: '2px',
         }}
       >
-        <span className="caption text-muted-foreground text-[9px] tracking-[0.2em] px-1 mb-1">
+        <span className="caption text-muted-foreground text-[8px] md:text-[9px] tracking-[0.2em] px-1 mb-0.5 md:mb-1">
           View
         </span>
         {VIEW_BUTTONS.map((btn) => (
@@ -49,7 +49,7 @@ export function ViewerControls({ actions, onFullscreen, isLoaded }: ViewerContro
             key={btn.view}
             onClick={() => actions.setCameraView(btn.view)}
             title={btn.label}
-            className="w-full flex items-center gap-2 px-2 py-1.5 text-left rounded-none
+            className="w-full flex items-center gap-1.5 md:gap-2 px-1.5 md:px-2 py-1 md:py-1.5 text-left rounded-none
                        text-muted-foreground hover:text-foreground hover:bg-white/5
                        transition-colors duration-200 group"
           >
@@ -58,14 +58,14 @@ export function ViewerControls({ actions, onFullscreen, isLoaded }: ViewerContro
             >
               {btn.abbr}
             </span>
-            <span className="text-[11px] font-light truncate">{btn.label}</span>
+            <span className="text-[10px] md:text-[11px] font-light truncate hidden sm:inline">{btn.label}</span>
           </button>
         ))}
       </div>
 
       {/* Utility buttons */}
       <div
-        className="flex flex-col gap-1 p-2"
+        className="flex flex-col gap-0.5 md:gap-1 p-1.5 md:p-2"
         style={{
           background: 'rgba(8,8,8,0.75)',
           backdropFilter: 'blur(12px)',
@@ -77,22 +77,22 @@ export function ViewerControls({ actions, onFullscreen, isLoaded }: ViewerContro
         <button
           onClick={actions.zoomExtents}
           title="Fit all"
-          className="flex items-center gap-2 px-2 py-1.5
+          className="flex items-center gap-1.5 md:gap-2 px-1.5 md:px-2 py-1 md:py-1.5
                      text-muted-foreground hover:text-foreground hover:bg-white/5
                      transition-colors duration-200"
         >
-          <Home size={12} className="text-primary" />
-          <span className="text-[11px] font-light">Fit All</span>
+          <Home size={11} className="text-primary md:w-[12px]" />
+          <span className="text-[10px] md:text-[11px] font-light hidden sm:inline">Fit All</span>
         </button>
         <button
           onClick={actions.clearSelection}
           title="Clear selection"
-          className="flex items-center gap-2 px-2 py-1.5
+          className="flex items-center gap-1.5 md:gap-2 px-1.5 md:px-2 py-1 md:py-1.5
                      text-muted-foreground hover:text-foreground hover:bg-white/5
                      transition-colors duration-200"
         >
-          <RotateCcw size={12} className="text-primary" />
-          <span className="text-[11px] font-light">Clear</span>
+          <RotateCcw size={11} className="text-primary md:w-[12px]" />
+          <span className="text-[10px] md:text-[11px] font-light hidden sm:inline">Clear</span>
         </button>
       </div>
 
@@ -100,7 +100,7 @@ export function ViewerControls({ actions, onFullscreen, isLoaded }: ViewerContro
       <button
         onClick={onFullscreen}
         title="Toggle fullscreen"
-        className="flex items-center justify-center w-full gap-2 py-2 px-3
+        className="flex items-center justify-center w-full gap-1.5 md:gap-2 py-1.5 md:py-2 px-2 md:px-3
                    text-muted-foreground hover:text-foreground
                    transition-colors duration-200"
         style={{
@@ -111,8 +111,8 @@ export function ViewerControls({ actions, onFullscreen, isLoaded }: ViewerContro
           borderRadius: '2px',
         }}
       >
-        <Maximize2 size={12} className="text-primary" />
-        <span className="text-[11px] font-light">Fullscreen</span>
+        <Maximize2 size={11} className="text-primary md:w-[12px]" />
+        <span className="text-[10px] md:text-[11px] font-light hidden sm:inline">Fullscreen</span>
       </button>
     </motion.div>
   );

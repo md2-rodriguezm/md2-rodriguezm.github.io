@@ -55,7 +55,7 @@ export function SelectedObjectPanel({ data, onClose }: SelectedObjectPanelProps)
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: 20 }}
           transition={{ duration: 0.35, ease: 'easeOut' }}
-          className="absolute top-6 right-6 z-10 w-64"
+          className="absolute top-4 right-4 md:top-6 md:right-6 z-10 w-56 md:w-64 max-h-[300px] overflow-y-auto"
           style={{
             background: 'rgba(8, 8, 8, 0.80)',
             backdropFilter: 'blur(16px)',
@@ -68,9 +68,9 @@ export function SelectedObjectPanel({ data, onClose }: SelectedObjectPanelProps)
             className="h-[2px] w-full"
             style={{ background: 'linear-gradient(90deg, hsl(28 56% 46%), transparent)' }}
           />
-          <div className="p-4">
-            <div className="flex items-center justify-between mb-3">
-              <span className="caption text-primary text-[10px] tracking-[0.2em]">
+          <div className="p-3 md:p-4">
+            <div className="flex items-center justify-between mb-2 md:mb-3">
+              <span className="caption text-primary text-[9px] md:text-[10px] tracking-[0.2em]">
                 Element Properties
               </span>
               <button
@@ -78,24 +78,24 @@ export function SelectedObjectPanel({ data, onClose }: SelectedObjectPanelProps)
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 aria-label="Close properties panel"
               >
-                <X size={14} />
+                <X size={12} className="md:w-[14px]" />
               </button>
             </div>
 
             {properties.length === 0 ? (
-              <p className="text-xs text-muted-foreground">No properties available.</p>
+              <p className="text-[10px] md:text-xs text-muted-foreground">No properties available.</p>
             ) : (
-              <div className="space-y-2">
+              <div className="space-y-1.5 md:space-y-2">
                 {properties.map(([key, value]) => (
-                  <div key={key} className="grid grid-cols-2 gap-2 border-b border-white/5 pb-2 last:border-0 last:pb-0">
+                  <div key={key} className="grid grid-cols-2 gap-2 border-b border-white/5 pb-1.5 md:pb-2 last:border-0 last:pb-0">
                     <span
-                      className="text-[10px] uppercase tracking-wide text-muted-foreground truncate"
+                      className="text-[9px] md:text-[10px] uppercase tracking-wide text-muted-foreground truncate"
                       title={key}
                     >
                       {key}
                     </span>
                     <span
-                      className="text-xs text-foreground text-right truncate font-light"
+                      className="text-[10px] md:text-xs text-foreground text-right truncate font-light"
                       title={value}
                     >
                       {value}
