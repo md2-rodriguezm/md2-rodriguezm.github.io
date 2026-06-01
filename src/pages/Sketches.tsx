@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
+import ContactCTA from '@/components/ContactCTA';
 import Footer from '@/components/Footer';
 import Lightbox from '@/components/Lightbox';
 import img1 from '@/assets/sketches/10fc248a-f141-476f-b51d-4157046c0b26.jpg';
@@ -112,17 +113,12 @@ export default function Sketches() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="mt-3">
-                    <h3 className="font-heading text-base text-foreground group-hover:text-primary transition-colors">
-                      {sketch.title}
-                    </h3>
-                    <span className="caption text-muted-foreground">{sketch.medium}</span>
-                  </div>
                 </motion.button>
               ))}
             </div>
           </div>
         </section>
+        <ContactCTA />
       </main>
       <Footer />
 

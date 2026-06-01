@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Download, Mail, Linkedin, ExternalLink, MapPin, Briefcase, GraduationCap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
+import ContactCTA from '@/components/ContactCTA';
 import Footer from '@/components/Footer';
 import architectPortrait from '@/assets/fotito.jpg';
 
@@ -13,7 +14,7 @@ const experience = [
 ];
 
 const education = [
-  { period: '2019 – 2021', degree: 'MArch — Master in Architecture', institution: 'ETSAB, UPC Barcelona' },
+  { period: '2019 – 2021', degree: 'MArch — Master in Architecture', institution: 'University of the West of England (UWE), Bristol' },
   { period: '2014 – 2019', degree: 'BArch — Bachelor in Architecture', institution: 'ETSAM, UPM Madrid' },
 ];
 
@@ -94,56 +95,9 @@ export default function JobApplication() {
           </div>
         </section>
 
-        {/* Top Projects */}
+        {/* Contact CTA */}
+        <ContactCTA />
 
-
-
-
-
-        {/* Bottom CTA */}
-        <section className="py-20 bg-background-deep border-t border-border-subtle">
-          <div className="section-container text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="heading-md mb-6">Interested in working together?</h2>
-              <p className="body-md text-muted-foreground mb-10 max-w-lg mx-auto">
-                I'm open to studio positions, collaborations, and freelance commissions.
-                Download the full portfolio or CV, or get in touch directly.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a
-                  href={`${import.meta.env.BASE_URL}MDRM_Portfolio.pdf`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-heading uppercase tracking-widest text-sm hover:bg-primary/90 transition-colors focus-ring"
-                >
-                  <Download size={18} />
-                  Download Portfolio
-                </a>
-                <a
-                  href={`${import.meta.env.BASE_URL}Martina_D_Rodriguez_Marrero_CV_v2.pdf`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 px-8 py-4 border border-primary text-primary font-heading uppercase tracking-widest text-sm hover:bg-primary hover:text-primary-foreground transition-colors focus-ring"
-                >
-                  <Download size={18} />
-                  Download CV
-                </a>
-                <a
-                  href="mailto:martina.rguezmarrero@gmail.com"
-                  className="inline-flex items-center gap-3 px-8 py-4 border border-border text-foreground font-heading uppercase tracking-widest text-sm hover:border-primary hover:text-primary transition-colors focus-ring"
-                >
-                  <Mail size={18} />
-                  Contact Me
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
       </main>
       <Footer />
     </>

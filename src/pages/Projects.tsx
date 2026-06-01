@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import ProjectsGrid from '@/components/ProjectsGrid';
+import ContactCTA from '@/components/ContactCTA';
 import Footer from '@/components/Footer';
 
 export default function Projects() {
@@ -15,6 +16,7 @@ export default function Projects() {
           </div>
         </section>
         <ProjectsGrid />
+        <ContactCTA />
       </main>
       <Footer />
     </>

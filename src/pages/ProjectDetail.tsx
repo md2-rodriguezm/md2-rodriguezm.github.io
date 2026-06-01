@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { projects } from '@/data/projects';
 import Navbar from '@/components/Navbar';
+import ContactCTA from '@/components/ContactCTA';
 import Footer from '@/components/Footer';
 import Lightbox from '@/components/Lightbox';
 
@@ -283,6 +284,7 @@ export default function ProjectDetail() {
             </div>
           </div>
         </section>
+        <ContactCTA />
       </main>
 
       <Footer />

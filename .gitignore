@@ -9,6 +9,9 @@ lerna-debug.log*
 
 node_modules
 
+# Build output (rebuilt by CI on deploy)
+dist
+
 
 *.local
 

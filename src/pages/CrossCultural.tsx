@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Calendar, Users } from 'lucide-react';
 import Navbar from '@/components/Navbar';
+import ContactCTA from '@/components/ContactCTA';
 import Footer from '@/components/Footer';
 import Lightbox from '@/components/Lightbox';
 
@@ -173,6 +174,7 @@ export default function CrossCultural() {
             ))}
           </div>
         </section>
+        <ContactCTA />
       </main>
       <Footer />
 

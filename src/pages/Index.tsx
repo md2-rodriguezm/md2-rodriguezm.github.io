@@ -1,12 +1,19 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Download } from 'lucide-react';
+import { ArrowRight, Download, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import heroImage from '@/assets/hero-architecture.jpg';
+import FeaturedProjects from '@/components/FeaturedProjects';
+import About from '@/components/About';
+import Timeline from '@/components/Timeline';
+import ContactCTA from '@/components/ContactCTA';
 import background from '@/assets/background.png';
 
 export default function Index() {
+  const scrollToProjects = () => {
+    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <>
       <Navbar />
@@ -32,7 +39,14 @@ export default function Index() {
           >
             <div className="backdrop-blur-xl bg-background/30 border border-border/40 px-6 py-10 md:p-20 text-center shadow-2xl">
               {/* Caption */}
-
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="caption text-primary block mb-5 md:mb-6"
+              >
+                Architecture · Computational Design
+              </motion.span>
 
               {/* Name */}
               <motion.h1
@@ -94,9 +108,31 @@ export default function Index() {
             </div>
           </motion.div>
 
-          {/* Decorative Lines */}
-
+          {/* Scroll Indicator */}
+          <motion.button
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1.6 }}
+            onClick={scrollToProjects}
+            className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-3 text-muted-foreground hover:text-primary transition-colors focus-ring"
+            aria-label="Scroll to projects"
+          >
+            <span className="caption">Scroll</span>
+            <ChevronDown size={20} className="scroll-indicator" />
+          </motion.button>
         </section>
+
+        {/* Selected Work */}
+        <FeaturedProjects />
+
+        {/* About */}
+        <About />
+
+        {/* Timeline */}
+        <Timeline />
+
+        {/* Contact CTA */}
+        <ContactCTA />
       </main>
       <Footer />
     </>

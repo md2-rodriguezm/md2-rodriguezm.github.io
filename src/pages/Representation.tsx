@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
+import ContactCTA from '@/components/ContactCTA';
 import Footer from '@/components/Footer';
 import Lightbox from '@/components/Lightbox';
 
@@ -165,6 +166,7 @@ export default function Representation() {
             </div>
           </div>
         </section>
+        <ContactCTA />
       </main>
       <Footer />
 
