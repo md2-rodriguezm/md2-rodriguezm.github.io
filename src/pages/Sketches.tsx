@@ -14,6 +14,19 @@ import img8 from '@/assets/sketches/sketchiing.jpg';
 import img9 from '@/assets/sketches/faltaba-1.jpeg';
 import img10 from '@/assets/sketches/faltaba-2.jpeg';
 
+// Newly extracted sketches
+import sketchImg11 from '@/assets/sketches/IMG_6475.jpeg';
+import sketchImg12 from '@/assets/sketches/LANDSCAPING.JPG';
+import sketchImg13 from '@/assets/sketches/PLANS.JPG';
+import sketchImg14 from '@/assets/sketches/QQ.jpg';
+import sketchImg15 from '@/assets/sketches/SECT.jpg';
+import sketchImg16 from '@/assets/sketches/sketch initial.png';
+import sketchImg17 from '@/assets/sketches/SKETCH SOA.jpeg';
+import sketchImg18 from '@/assets/sketches/SOA sketch.jpeg';
+import sketchImg19 from '@/assets/sketches/WW.jpg';
+import sketchImg20 from '@/assets/sketches/img-9033.jpg';
+import sketchImg21 from '@/assets/sketches/img-2705.jpg';
+
 interface Sketch {
   id: string;
   title: string;
@@ -32,6 +45,17 @@ const sketches: Sketch[] = [
   { id: '8', title: 'Studio Work', medium: 'Photography', image: img8 },
   { id: '9', title: 'Conceptual Study I', medium: 'Hand Sketch', image: img9 },
   { id: '10', title: 'Conceptual Study II', medium: 'Hand Sketch', image: img10 },
+  { id: '11', title: 'Conceptual Study III', medium: 'Hand Sketch', image: sketchImg11 },
+  { id: '12', title: 'Landscaping Concept', medium: 'Hand Sketch', image: sketchImg12 },
+  { id: '13', title: 'Plan Details', medium: 'Technical Drawing', image: sketchImg13 },
+  { id: '14', title: 'Conceptual Perspective', medium: 'Process Sketch', image: sketchImg14 },
+  { id: '15', title: 'Sectional Study', medium: 'Technical Drawing', image: sketchImg15 },
+  { id: '16', title: 'Initial Concept Study', medium: 'Freehand Sketch', image: sketchImg16 },
+  { id: '17', title: 'SOA Spatial Study', medium: 'Process Sketch', image: sketchImg17 },
+  { id: '18', title: 'SOA Structural Concept', medium: 'Process Sketch', image: sketchImg18 },
+  { id: '19', title: 'Elevation Study', medium: 'Technical Drawing', image: sketchImg19 },
+  { id: '20', title: 'Form Iteration Study', medium: 'Hand Sketch', image: sketchImg20 },
+  { id: '21', title: 'Site Planning Study', medium: 'Process Sketch', image: sketchImg21 },
 ];
 
 export default function Sketches() {

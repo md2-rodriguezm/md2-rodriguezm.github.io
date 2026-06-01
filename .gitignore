@@ -27,3 +27,4 @@ node_modules
 *.mp4
 src/assets/**/*.pdf
 src/assets/RESEARCH & PAPERS/
+*.zip

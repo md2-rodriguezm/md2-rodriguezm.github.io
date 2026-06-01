@@ -82,7 +82,7 @@ export default function Index() {
                   Download Portfolio
                 </a>
                 <a
-                  href={`${import.meta.env.BASE_URL}Martina_D_Rodriguez_Marrero_CV.pdf`}
+                  href={`${import.meta.env.BASE_URL}Martina_D_Rodriguez_Marrero_CV_v2.pdf`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 px-8 py-4 border border-foreground/30 text-foreground text-xs uppercase tracking-[0.2em] hover:bg-foreground/10 backdrop-blur-sm transition-colors focus-ring"

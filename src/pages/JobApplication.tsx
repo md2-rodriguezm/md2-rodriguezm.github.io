@@ -125,7 +125,7 @@ export default function JobApplication() {
                   Download Portfolio
                 </a>
                 <a
-                  href={`${import.meta.env.BASE_URL}Martina_D_Rodriguez_Marrero_CV.pdf`}
+                  href={`${import.meta.env.BASE_URL}Martina_D_Rodriguez_Marrero_CV_v2.pdf`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 px-8 py-4 border border-primary text-primary font-heading uppercase tracking-widest text-sm hover:bg-primary hover:text-primary-foreground transition-colors focus-ring"

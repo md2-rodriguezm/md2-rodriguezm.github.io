@@ -116,32 +116,44 @@ export default function ProjectDetail() {
           </div>
         </section>
 
-        {/* Video */}
-        {project.videoUrl && (
-          <section className="section-py bg-background border-t border-border-subtle">
-            <div className="section-container">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="mb-8"
-              >
-                <span className="caption text-primary">Video</span>
-                <h2 className="heading-md mt-4">Project Presentation</h2>
-              </motion.div>
-              <div className="relative w-full aspect-video border border-border-subtle overflow-hidden">
-                <iframe
-                  src={project.videoUrl}
-                  title={`${project.title} — Video`}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
-                />
-              </div>
+        {/* Gallery */}
+        <section className="section-py bg-background-deep border-t border-border-subtle">
+          <div className="section-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="mb-12"
+            >
+              <span className="caption text-primary">Gallery</span>
+              <h2 className="heading-md mt-4">Project Images</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+              {project.gallery.map((image, index) => (
+                <motion.button
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  onClick={() => openLightbox(index)}
+                  className={`image-container aspect-[4/3] focus-ring cursor-pointer ${
+                    index === 0 ? 'md:col-span-2 md:aspect-[16/9]' : ''
+                  }`}
+                  aria-label={`View image ${index + 1} in fullscreen`}
+                >
+                  <img
+                    src={image}
+                    alt={`${project.title} gallery image ${index + 1}`}
+                    className="w-full h-full object-cover"
+                  />
+                </motion.button>
+              ))}
             </div>
-          </section>
-        )}
+          </div>
+        </section>
 
         {/* BIM Viewer — Project 3 (hospital) only */}
         {project.id === 'hospital' && (
@@ -197,43 +209,32 @@ export default function ProjectDetail() {
           </section>
         )}
 
-        {/* Gallery */}
-        <section className="section-py bg-background-deep border-t border-border-subtle">
-          <div className="section-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="mb-12"
-            >
-              <span className="caption text-primary">Gallery</span>
-              <h2 className="heading-md mt-4">Project Images</h2>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-              {project.gallery.map((image, index) => (
-                <motion.button
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  onClick={() => openLightbox(index)}
-                  className={`image-container aspect-[4/3] focus-ring cursor-pointer ${index === 0 ? 'md:col-span-2 md:aspect-[16/9]' : ''
-                    }`}
-                  aria-label={`View image ${index + 1} in fullscreen`}
-                >
-                  <img
-                    src={image}
-                    alt={`${project.title} gallery image ${index + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                </motion.button>
-              ))}
+        {/* Video */}
+        {project.videoUrl && (
+          <section className="section-py bg-background-deep border-t border-border-subtle">
+            <div className="section-container">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="mb-8"
+              >
+                <span className="caption text-primary">Video</span>
+                <h2 className="heading-md mt-4">Project Presentation</h2>
+              </motion.div>
+              <div className="relative w-full aspect-video border border-border-subtle overflow-hidden">
+                <iframe
+                  src={project.videoUrl}
+                  title={`${project.title} — Video`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
 
         {/* Navigation to Other Projects */}
         <section className="py-16 bg-background border-t border-border-subtle">
