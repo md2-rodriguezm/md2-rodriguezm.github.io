@@ -19,7 +19,7 @@ export const papers: Paper[] = [
     year: 2026,
     institution: 'University of the West of England (UWE)',
     abstract: 'In response to the Advanced Cultural Studies module, this manifesto bridges architectural theory and literature with a curation of Nocturnal Excerpts of Personal Reflections written on a daily basis over the past year to define my future architectural praxis. This approach mirrors American philosopher and professor Donald Schön’s concept of the “reflective practitioner” by interrogating my own context and questioning what it truly means to claim recognition as an architect. The writing unfolds as an explorative conversation with myself, weaving literature, theoretical frameworks, memory and experience to address the psychological, sociological and philosophical dimensions of the discipline.',
-    pdfUrl: 'YOUR_GOOGLE_DRIVE_LINK_HERE'
+    pdfUrl: 'https://drive.google.com/file/d/1keaV2Y6aqUXABaaGhz6Qfvr-NbcbqCtH/view?usp=drive_link'
   },
   {
     id: 'tfm',
