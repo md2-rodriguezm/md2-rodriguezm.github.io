@@ -27,7 +27,7 @@ export default function ContactCTA() {
               Get in Touch
             </a>
             <a
-              href={`${import.meta.env.BASE_URL}MDRM_Portfolio.pdf`}
+              href={`${import.meta.env.BASE_URL}MDRM_ARCHITECTURE_PORTFOLIO.pdf`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4 border border-primary text-primary font-heading uppercase tracking-widest text-sm hover:bg-primary hover:text-primary-foreground transition-colors focus-ring"
